@@ -1,0 +1,15 @@
+
+  BMP085 library for the Arduino.
+
+  This library implements the following features:
+
+   - reads uncompensated temperature and pressure readings
+   - calibrates readings with correction coefficients from internal eeprom
+
+  Author:          Petre Rodan <petre.rodan@simplex.ro>
+  Available from:  https://github.com/rodan/bmp085
+  License:         GNU GPLv3
+
+  The BMP085 is a digital pressure sensor with i2c interface, temperature 
+  measurement, and a factory calibrated 300-1100 hPa pressure range.
+
