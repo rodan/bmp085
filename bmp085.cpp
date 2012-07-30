@@ -44,8 +44,7 @@ uint8_t bmp085_get_uint8_t(uint8_t addr)
     Wire.endTransmission();
 
     Wire.requestFrom((uint8_t) BMP085_I2C_ADDR, (uint8_t) 1);
-    while (Wire.available() < 1) {
-    }
+    delay(4); // this sensor might be missing, do not block execution before read()
     rv = Wire.read();
 
     return rv;
@@ -60,9 +59,7 @@ uint16_t bmp085_get_uint16_t(uint8_t addr)
     Wire.endTransmission();
 
     Wire.requestFrom((uint8_t) BMP085_I2C_ADDR, (uint8_t) 2);
-    while (Wire.available() < 2) {
-    }
-
+    delay(4); // this sensor might be missing, do not block execution before read()
     t1 = Wire.read();
     t2 = Wire.read();
 
@@ -86,7 +83,6 @@ void bmp085_get_cal_param(struct bmp085 *b)
 
 void bmp085_init(struct bmp085 *b)
 {
-    Wire.begin();
     bmp085_get_cal_param(b);
 }
 

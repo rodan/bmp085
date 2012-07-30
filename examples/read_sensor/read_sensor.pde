@@ -1,4 +1,5 @@
 
+#include <Wire.h>
 #include "bmp085.h"
 
 struct bmp085 b;
@@ -6,6 +7,7 @@ struct bmp085 b;
 void setup()
 {
     Serial.begin(9600);
+    Wire.begin();
     bmp085_init(&b);
 }
 
