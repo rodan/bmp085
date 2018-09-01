@@ -8,7 +8,7 @@
    - reads uncompensated temperature and pressure readings
    - calibrates readings with correction coefficients from internal eeprom
 
-  Author:          Petre Rodan <petre.rodan@simplex.ro>
+  Author:          Petre Rodan <2b4eda@subdimension.ro>
   Available from:  https://github.com/rodan/bmp085
   License:         GNU GPLv3
 
